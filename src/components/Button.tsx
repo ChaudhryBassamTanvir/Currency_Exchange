@@ -1,9 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import type { PropsWithChildren } from 'react'
 
-const Button = () => {
+
+type CurrencyButtonProps= PropsWithChildren<{name:"string",flag:"string"}>
+
+
+const Button = (props:CurrencyButtonProps) => {
   return (
-    <View>
+    <View style={styles.buttonContainer}>
       <Text>Button</Text>
     </View>
   )
@@ -11,4 +16,9 @@ const Button = () => {
 
 export default Button
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+
+
+
+    buttonContainer:{}
+})
